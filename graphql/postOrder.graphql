@@ -1,0 +1,8 @@
+mutation($createOrderInput: CreateOrderInput!) {
+  createOrder(input: $createOrderInput) {
+		clientMutationId
+    order {
+      id
+    }
+  }
+}
