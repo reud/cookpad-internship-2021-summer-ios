@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,12 @@
 		11FD9C802692A79700BBCD33 /* MiniMartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FD9C7F2692A79700BBCD33 /* MiniMartUITests.swift */; };
 		11FD9CA62692B3A700BBCD33 /* UserDefaults+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FD9CA52692B3A700BBCD33 /* UserDefaults+Codable.swift */; };
 		11FD9CB72692C4BE00BBCD33 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FD9CB62692C4BE00BBCD33 /* RemoteImage.swift */; };
+		40BF28F926CB527D00C317FD /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 40BF28F826CB527D00C317FD /* Apollo */; };
+		40BF28FB26CB543A00C317FD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BF28FA26CB543A00C317FD /* API.swift */; };
+		40BF28FD26CB549D00C317FD /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BF28FC26CB549D00C317FD /* Network.swift */; };
+		40BF28FF26CB572800C317FD /* ProductListPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BF28FE26CB572800C317FD /* ProductListPageView.swift */; };
+		40BF290126CB6E7800C317FD /* ProductDetailPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BF290026CB6E7800C317FD /* ProductDetailPageView.swift */; };
+		40BF290326CB703A00C317FD /* CartPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BF290226CB703A00C317FD /* CartPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,11 @@
 		11FD9C812692A79700BBCD33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11FD9CA52692B3A700BBCD33 /* UserDefaults+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Codable.swift"; sourceTree = "<group>"; };
 		11FD9CB62692C4BE00BBCD33 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		40BF28FA26CB543A00C317FD /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		40BF28FC26CB549D00C317FD /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		40BF28FE26CB572800C317FD /* ProductListPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPageView.swift; sourceTree = "<group>"; };
+		40BF290026CB6E7800C317FD /* ProductDetailPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPageView.swift; sourceTree = "<group>"; };
+		40BF290226CB703A00C317FD /* CartPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPageView.swift; sourceTree = "<group>"; };
 		8AEC041E26B26823000E997E /* Tutorial.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Tutorial.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40BF28F926CB527D00C317FD /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +102,9 @@
 		11D5A39D26A71CF3005BD9C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				40BF28FE26CB572800C317FD /* ProductListPageView.swift */,
+				40BF290026CB6E7800C317FD /* ProductDetailPageView.swift */,
+				40BF290226CB703A00C317FD /* CartPageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -104,6 +119,8 @@
 		11D5A39F26A71D00005BD9C0 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				40BF28FA26CB543A00C317FD /* API.swift */,
+				40BF28FC26CB549D00C317FD /* Network.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -197,6 +214,9 @@
 			dependencies = (
 			);
 			name = MiniMart;
+			packageProductDependencies = (
+				40BF28F826CB527D00C317FD /* Apollo */,
+			);
 			productName = MiniMart;
 			productReference = 11FD9C5F2692A79600BBCD33 /* MiniMart.app */;
 			productType = "com.apple.product-type.application";
@@ -268,6 +288,9 @@
 				Base,
 			);
 			mainGroup = 11FD9C562692A79600BBCD33;
+			packageReferences = (
+				40BF28F726CB527D00C317FD /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = 11FD9C602692A79600BBCD33 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -311,9 +334,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				11FD9CA62692B3A700BBCD33 /* UserDefaults+Codable.swift in Sources */,
+				40BF290126CB6E7800C317FD /* ProductDetailPageView.swift in Sources */,
+				40BF28FF26CB572800C317FD /* ProductListPageView.swift in Sources */,
 				1152031526A66A7500555FBE /* ContentView.swift in Sources */,
 				11FD9CB72692C4BE00BBCD33 /* RemoteImage.swift in Sources */,
 				11A47030269404B000E9C8AD /* ProcessInfo+Extension.swift in Sources */,
+				40BF28FB26CB543A00C317FD /* API.swift in Sources */,
+				40BF290326CB703A00C317FD /* CartPageView.swift in Sources */,
+				40BF28FD26CB549D00C317FD /* Network.swift in Sources */,
 				11FD9C632692A79600BBCD33 /* MiniMartApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -634,6 +662,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		40BF28F726CB527D00C317FD /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.46.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		40BF28F826CB527D00C317FD /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40BF28F726CB527D00C317FD /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 11FD9C572692A79600BBCD33 /* Project object */;
 }
