@@ -23,11 +23,11 @@ struct CartPageView: View {
                             }.padding(.vertical, 8)
                         }
                     }
-                    HStack {
-                        Text("合計: \(cartState.cost()) 円").frame(maxWidth: .infinity, alignment: .trailing)
-                        Spacer()
-                    }
                 }.listStyle(PlainListStyle())
+                HStack {
+                    Text("合計: \(cartState.cost()) 円").frame(maxWidth: .infinity, alignment: .trailing)
+                    Spacer()
+                }
             }
 
             Spacer()
